@@ -1,0 +1,6 @@
+two_moons: n=500 eval_seed=1
+  noise_prior  energy_distance = 0.0483
+  gaussian_fit energy_distance = 0.0282
+swiss_roll_2d: n=500 eval_seed=1
+  noise_prior  energy_distance = 0.0265
+  gaussian_fit energy_distance = 0.0203
