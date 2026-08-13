@@ -1,0 +1,33 @@
+=== two_moons ===
+train: 2000 epochs, T=200, batch=64, lr=0.002, time=4.55s
+  loss: first 5 epochs mean=0.7702, last 5 epochs mean=0.4735
+  baseline noise_prior  energy_distance = 0.0483
+  baseline gaussian_fit energy_distance = 0.0282
+   steps   energy_distance  sample_time_s
+     200           -0.0002         0.0634
+     100            0.0012         0.0317
+      50            0.0003         0.0165
+      20           -0.0013         0.0070
+      10           -0.0012         0.0037
+       5            0.0077         0.0022
+       2            0.0493         0.0014
+       1            0.0410         0.0008
+  sanity check: full-step (200) energy_distance=-0.0002 < gaussian_fit baseline=0.0282 -> beats the baseline
+
+=== swiss_roll_2d ===
+train: 2000 epochs, T=200, batch=64, lr=0.002, time=4.67s
+  loss: first 5 epochs mean=0.7916, last 5 epochs mean=0.4627
+  baseline noise_prior  energy_distance = 0.0265
+  baseline gaussian_fit energy_distance = 0.0203
+   steps   energy_distance  sample_time_s
+     200            0.0024         0.0653
+     100            0.0024         0.0347
+      50            0.0032         0.0169
+      20            0.0004         0.0072
+      10           -0.0004         0.0037
+       5            0.0036         0.0022
+       2            0.0194         0.0013
+       1            0.0180         0.0007
+  sanity check: full-step (200) energy_distance=0.0024 < gaussian_fit baseline=0.0203 -> beats the baseline
+
+total wall-clock time: 9.94s
