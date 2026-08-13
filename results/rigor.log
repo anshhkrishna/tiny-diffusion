@@ -1,0 +1,37 @@
+=== two_moons ===
+gaussian_fit baseline energy_distance = 0.0282
+seed 0: train_time=8.41s full_step_energy_distance=-0.0047 beats_gaussian=True
+seed 1: train_time=7.79s full_step_energy_distance=-0.0014 beats_gaussian=True
+seed 2: train_time=7.76s full_step_energy_distance=-0.0024 beats_gaussian=True
+sanity: beats gaussian_fit in 3/3 seeds
+
+steps=200 mean=-0.0029 std=0.0014 n_seeds=3
+steps=100 mean=-0.0023 std=0.0010 n_seeds=3
+steps=50 mean=-0.0015 std=0.0011 n_seeds=3
+steps=20 mean=-0.0011 std=0.0033 n_seeds=3
+steps=10 mean=0.0023 std=0.0033 n_seeds=3
+steps=5 mean=0.0099 std=0.0037 n_seeds=3
+steps=2 mean=0.0477 std=0.0151 n_seeds=3
+steps=1 mean=0.0411 std=0.0000 n_seeds=3
+
+core_claim: mean_energy_distance(steps=200)=-0.0029 < mean_energy_distance(steps=1)=0.0411 -> holds
+
+=== swiss_roll_2d ===
+gaussian_fit baseline energy_distance = 0.0203
+seed 0: train_time=8.35s full_step_energy_distance=-0.0004 beats_gaussian=True
+seed 1: train_time=7.62s full_step_energy_distance=0.0011 beats_gaussian=True
+seed 2: train_time=8.00s full_step_energy_distance=0.0021 beats_gaussian=True
+sanity: beats gaussian_fit in 3/3 seeds
+
+steps=200 mean=0.0009 std=0.0010 n_seeds=3
+steps=100 mean=0.0019 std=0.0011 n_seeds=3
+steps=50 mean=0.0013 std=0.0004 n_seeds=3
+steps=20 mean=0.0000 std=0.0009 n_seeds=3
+steps=10 mean=0.0012 std=0.0011 n_seeds=3
+steps=5 mean=0.0037 std=0.0010 n_seeds=3
+steps=2 mean=0.0281 std=0.0036 n_seeds=3
+steps=1 mean=0.0180 std=0.0001 n_seeds=3
+
+core_claim: mean_energy_distance(steps=200)=0.0009 < mean_energy_distance(steps=1)=0.0180 -> holds
+
+total wall-clock time: 51.03s
